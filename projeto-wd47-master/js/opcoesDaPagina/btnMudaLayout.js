@@ -20,7 +20,6 @@ function mudaTexto() {
 function mudaLayout() {
     const mural = document.querySelector(".mural"); // recuperando o elemento html pela classe css
     mural.classList.toggle("mural--linha");
-    // testando commit
 }
 
 
