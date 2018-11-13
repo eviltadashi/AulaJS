@@ -1,3 +1,8 @@
-var btn = document.querySelector(.no-js)
 
-btn.classList.remove('no-js')
+
+(function(){
+    var btn = document.querySelector(".no-js");
+
+    btn.classList.remove('no-js')
+
+})()
