@@ -27,3 +27,7 @@ btn.addEventListener("click", function () {
     mudaTexto();
     mudaLayout();
 });
+
+
+/* remover a classe que esconde elementos que já foram implementados */
+btn.classList.remove("no-js");
