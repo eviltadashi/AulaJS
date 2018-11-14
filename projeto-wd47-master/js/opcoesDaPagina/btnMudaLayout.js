@@ -1,3 +1,4 @@
+;(function() {
 /*
 
 var altera a qualquer momento
@@ -17,17 +18,19 @@ function mudaTexto() {
 // nesse momento nao pode usar mudaTexto(), pois o () entende-se que sera chamada a funcao
 
 
-function mudaLayout() {
-    const mural = document.querySelector(".mural"); // recuperando o elemento html pela classe css
-    mural.classList.toggle("mural--linha");
-}
-
-
-btn.addEventListener("click", function () {
-    mudaTexto();
-    mudaLayout();
-});
-
-
-/* remover a classe que esconde elementos que já foram implementados */
-btn.classList.remove("no-js");
+    function mudaLayout() {
+        const mural = document.querySelector(".mural"); // recuperando o elemento html pela classe css
+        mural.classList.toggle("mural--linha");
+    }
+    
+    
+    btn.addEventListener("click", function () {
+        mudaTexto();
+        mudaLayout();
+    });
+    
+    
+    /* remover a classe que esconde elementos que já foram implementados */
+    btn.classList.remove("no-js");
+    
+})()
