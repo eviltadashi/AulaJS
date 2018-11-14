@@ -16,6 +16,10 @@
 	transition: 0.5s;
 }
 
+.cartao--muda--cor {
+	transition: 0.2s ease-in;
+}
+
 .cartao.cartao--focado,
 .cartao:hover,
 .cartao:focus {
