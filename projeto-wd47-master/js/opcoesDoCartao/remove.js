@@ -9,7 +9,18 @@
             cartao.remove() // executa a funcao remove
         })
     }
-    btns.forEach(function(btn) {
+    /* btns.forEach(function(btn) {
+        btn.addEventListener('click', removeCartao)
+    }) */
+
+    /* btns.forEach(btn => btn.addEventListener('click', removeCartao)) sem as chaves ele retorna um valor */
+
+    btns.forEach(btn => {  // arrow function
         btn.addEventListener('click', removeCartao)
     })
+
+/* SPREAD operator => var obj2 = {..., obj} clona o obj em uma nova instancia obj2
+    Oject.assign({}, obj) -> clona obj e retorna uma nova instancia, ambos sobrescrevem propriedades
+*/
+
 })()
