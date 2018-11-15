@@ -1,5 +1,18 @@
 ;(function() {
 
+    function adicionaEventoRemoveCartao(event, cartao) {
+        if (event.target.classList.contains("opcoesDoCartao-remove")) {
+            cartao.classList.add("cartao--some")
+            removeCartao({ cartao:cartao, evento:"transitionend" }) // named parameter, passando o valor do parametro para um objeto com propriedades com nomes
+        }
+    }
+
+    function removeCartao({ cartao, evento }) { // named parameters, ele recebe o valor pelo nome do parametro
+        cartao.addEventListener(evento, function() {
+            cartao.remove();
+        })
+    }
+
     const cartoes = document.querySelectorAll(".cartao");
 
     cartoes.forEach(cartao => {
@@ -34,6 +47,9 @@
             }
         })
 
+        cartao.addEventListener("click", function(event){
+            console.log("evento")
+            adicionaEventoRemoveCartao(event, cartao)
+        })
     })
-
 })()
