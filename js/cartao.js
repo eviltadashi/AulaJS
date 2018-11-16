@@ -1,69 +1,26 @@
-;(function(){
+;(function a(){
     var cartoes = document.querySelectorAll(".cartao")
-
     cartoes.forEach(function(cartao){
-
-        cartao.addEventListener("change",function(event){
+        cartao.on("change",function(event){
             const elementoSelecionado = event.target
-            const isRadioTipo = elementoSelecionado.classList.contains('opcoesDoCartao-radioTipo')
+            const isRadioTipo = elementoSelecionado.hasClass('opcoesDoCartao-radioTipo')
             if(isRadioTipo){
                 cartao.style.backgroundColor = elementoSelecionado.value
             }
       })
-
     })
-
 })()
-
-
-;(
-    function(){
+;(  function b(){
         const cartoes = document.querySelectorAll(".cartao")
-
         cartoes.forEach(function(cartao){
-        
-           
-            cartao.addEventListener("focusin",function(){
-                cartao.classList.add("cartao--focado")
+            cartao.on("focusin",function(){
+                cartao.addClass("cartao--focado")
             })
-
-            cartao.addEventListener("focusout",function(){
-                cartao.classList.remove("cartao--focado")
+            cartao.on("focusout",function(){
+                cartao.removeClass("cartao--focado")
             })
         })
     }
 )()
 
-
-;(
-    function(){
-        const cartoes = document.querySelectorAll(".cartao");
-
-        cartoes.forEach(function(cartao){
-            
-            cartao.addEventListener("keydown",function(e){
-                if(e.key==="enter" || e.key===" "){
-                    e.target.click()
-                }
-            })
-
-
-
-            cartao.addEventListener('click', function(event){
-                const elementoSelecionado = event.target
-                if(elementoSelecionado.classList.contains('opcoesDoCartao-remove')){
-                    cartao.classList.add("cartao--some")
-                    cartao.addEventListener("transictionEnd",function(){
-                        cartao.remove()
-                    })
-                }
-            })
-
-
-
-
-        })
-    }
-
-)()
 
