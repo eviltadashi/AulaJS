@@ -18,16 +18,17 @@
             //const btnSubmit = form.cartao[form.children.length - 1] // ultimo elemento do form
             $form.before(msgErro);
             $form.on("animationend", function (event) {
-        
+
                 // animationend eh um css transition event ----https://developer.mozilla.org/en-US/docs/Web/Events
 
                 // na classe .formNovoCartao-msg existe a propriedade animation
                 event.target.remove() // o filho div executou esse evento e o pai form ouviu e a partir disso executa algo
             })
             //form.insertBefore(msgErro, btnSubmit) // vai adicionar a div antes do btn
-        } else {         
-            adicionaCartaoMural({conteudo:$textArea.val().trim(), cor:"red"})
-            $textArea.val("")}
+        } else {
+            cartao.adiciona({ conteudo: $textArea.val().trim(), cor: "red" })
+            $textArea.val("")
+        }
     })
 
     /* $nomeVariavel eh somente para ficar visivel quando estamos usando elemento jquery */
